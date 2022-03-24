@@ -14,7 +14,7 @@ $userRow=mysqli_fetch_array($res,MYSQLI_ASSOC);
 
 
 	
-//INSERT
+//The survey answers into the database
 if (isset($_POST['appointment'])) {
 $patientIc = mysqli_real_escape_string($con,$userRow['icPatient']);
 $patientEmail = mysqli_real_escape_string($con,$userRow['patientEmail']);
@@ -51,6 +51,7 @@ $sql = "UPDATE doctorschedule SET bookAvail = '$avail' WHERE scheduleId = $sched
 
 
 
+//email needs to be connected, Salem part imma do that soon
 $scheduleres=mysqli_query($con,$sql);
 
 $receiver = "joseph.pezhathinal1@gmail.com";
@@ -69,7 +70,7 @@ if ($scheduleres) {
 
 
 $result = mysqli_query($con,$query);
-// echo $result;
+//error handeling
 if( $result )
 {
 ?>

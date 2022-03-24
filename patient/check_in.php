@@ -1,4 +1,5 @@
 <?php
+//creating the session
       session_start();
       include_once '../assets/conn/dbconnect.php';
 
@@ -15,6 +16,7 @@
 ?>
 
 <?php
+//checking the appointments that have been made for that day
       $res = mysqli_query($con, "SELECT a.*, b.*,c.*
       FROM patient a
       JOIN appointment b
@@ -30,6 +32,7 @@
       exit();
     }
 
+    //inputting car information into the database
     while ($appointment=mysqli_fetch_array($res)) {
       $app = $appointment['appId'];
     
@@ -39,6 +42,8 @@
       $make = $_POST['make'];
       $color = $_POST['color'];
       $plate = $_POST['plate'];
+      
+      
       // mysqli_query("UPDATE blogEntry SET content = $udcontent, title = $udtitle WHERE id = $id");
       $update=mysqli_query($con,"UPDATE appointment SET status='checked-in', location='$location', make='$make', color='$color', plate='$plate' WHERE appId = '$app'");
       // $userRow=mysqli_fetch_array($res);
