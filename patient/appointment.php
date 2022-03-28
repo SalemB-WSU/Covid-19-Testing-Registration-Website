@@ -88,12 +88,19 @@ header("Location: patient.php");
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<<<<<<< Updated upstream
     <script src="https://kit.fontawesome.com/95c473646d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/loginButton.css">
 	<link rel="stylesheet" href="../assets/css/submit.css">
 	<link rel="stylesheet" href="../assets/css/table.css">
 	<link rel="stylesheet" href="../assets/css/input.css">
+=======
+	<!--css files-->
+	<script src="https://kit.fontawesome.com/95c473646d.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/button.css">
+>>>>>>> Stashed changes
 </head>
 
 <header>
@@ -114,13 +121,21 @@ header("Location: patient.php");
 		<div>Appointment Information</div>
 		<!--prints out the details of the appointment chosen-->
 		<div>
+<<<<<<< Updated upstream
 			Date: <?php echo date('m/d/Y', strtotime($date)); ?><br>
+=======
+			Date: <?php echo $date ?><br>
+>>>>>>> Stashed changes
 			Time: <?php echo $timeslot ?><br>
 		</div>
 		<!--covid-19 questionaire starts here-->
 
+<<<<<<< Updated upstream
 			
 		
+=======
+		<div class="form-group">
+>>>>>>> Stashed changes
 			<p>1. Regardless of your vaccination status, have
 				you experienced any of the symptoms in
 				the list below in the past 48 hours?</p>
@@ -185,12 +200,22 @@ header("Location: patient.php");
 		  <label for="yes_vaccinated"> Yes</label><br>
 		  <input type="radio" class= "largerRadio" id="no_vaccinated" name="vaccinated" value="no">
 		  <label for="no_vaccinated"> No</label><br><br>
+<<<<<<< Updated upstream
 
 		<!--Covid-19 questionaire ends-->
         <!--when the submit button is clicked the input will be sent to the php at the top to be entered to the database-->
 	
 		<input type="submit" name="appointment" id="submit" value="Create Appointment">
 
+=======
+		</div>
+		<!--Covid-19 questionaire ends-->
+        <!--when the submit button is clicked the input will be sent to the php at the top to be entered to the database-->
+		<div class="form-group">
+			<input type="submit" name="appointment" id="submit" class="btn btn-primary" value="Make Appointment">
+		</div>
+     
+>>>>>>> Stashed changes
 	</form>
 	</div>
 	

@@ -5,34 +5,31 @@ include_once 'assets/conn/dbconnect.php';
 session_start();
 //If a clinic session is already running without loging out from the clinic session,
 //it will be directed toward doctordashboard.php(file) in clinic(folder).
-if (isset($_SESSION['doctorSession']) != "") {
-header("Location: clinic/doctordashboard.php");
+if (isset($_SESSION['staffSession']) != "") {
+header("Location: clinic/staffpatientlist.php");
 }
 if (isset($_POST['login']))
 {
-$doctorId = mysqli_real_escape_string($con,$_POST['doctorId']);
+$icstaff = mysqli_real_escape_string($con,$_POST['icstaff']);
 //clinc staff username
 $password  = mysqli_real_escape_string($con,$_POST['password']);
 //clinic staff password
-$res = mysqli_query($con,"SELECT * FROM doctor WHERE doctorId = '$doctorId'");
+$res = mysqli_query($con,"SELECT * FROM staff WHERE icstaff = '$icstaff'");
 //check and get if the username is present in the database.
 $row=mysqli_fetch_array($res,MYSQLI_ASSOC);
 //if statement check if password matches with what is present for the username.
 if ($row['password'] == $password)
 {
-$_SESSION['doctorSession'] = $row['doctorId'];
+$_SESSION['staffSession'] = $row['icstaff'];
 //error checking
-<<<<<<< Updated upstream
-=======
 //If a clinic session is already running without loging out from the clinic session,
 //it will be directed toward doctordashboard.php(file) in clinic(folder).
->>>>>>> Stashed changes
 ?>
 <script type="text/javascript">
 alert('Login Success');
 </script>
 <?php
-header("Location: clinic/doctordashboard.php");
+header("Location: clinic/staffpatientlist.php");
 } else {
 ?>
 <script type="text/javascript">
@@ -73,7 +70,7 @@ Main Page of the WCHC Clinic Website-->
         <form class="form" role="form" method="POST" accept-charset="UTF-8">
             <!--The text field to enter the Username-->
             <label>Username</label><br>
-            <input name="doctorId" type="text" placeholder="Doctor ID" required><br>
+            <input name="icstaff" type="text" placeholder="Staff ID" required><br>
             <!--The text field to enter the Password-->
             <label>Password</label><br>
             <input name="password" type="password" placeholder="Password" required><br><br>

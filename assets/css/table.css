@@ -1,9 +1,15 @@
 /* table css */
 
 table {
+<<<<<<< Updated upstream
     padding: 0px;
     border-radius: 10px 10px;
     margin: 10px 10px 10px;
+=======
+    padding: 60px;
+    border-radius: 10px 10px;
+    margin: 25px 25px 25px;
+>>>>>>> Stashed changes
     width: 95%;
    
     text-align: center;
@@ -16,7 +22,11 @@ table {
   /* responsive below */
   @media 
   only screen and (max-width: 760px),
+<<<<<<< Updated upstream
   (min-device-width: 375px) and (max-device-width: 1280px)  {
+=======
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+>>>>>>> Stashed changes
   
     /* makes table behave not like a table */
     table, thead, tbody, th, td, tr { 
@@ -35,10 +45,16 @@ table {
     td { 
       /* a "row" */
       border: none;
+<<<<<<< Updated upstream
       /*border-bottom: 1px solid #eee;*/ 
       position: relative;
       padding-left: -20%; 
       font-size: .8em;
+=======
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+>>>>>>> Stashed changes
     }
     
     td:before { 
@@ -50,6 +66,9 @@ table {
       padding-right: 10px 20px; 
       white-space: nowrap;
       text-align: center;
+<<<<<<< Updated upstream
       
+=======
+>>>>>>> Stashed changes
     }
 }

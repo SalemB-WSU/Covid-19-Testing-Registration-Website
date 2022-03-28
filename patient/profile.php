@@ -47,14 +47,22 @@ $female = "checked";
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <script src="https://kit.fontawesome.com/95c473646d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../assets/css/main.css">
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="../assets/css/loginButton.css">
 	<link rel="stylesheet" href="../assets/css/table.css">
 	<link rel="stylesheet" href="../assets/css/input.css">
+=======
+    <link rel="stylesheet" href="../assets/css/patientHomeButton.css">
+>>>>>>> Stashed changes
 </head>
 
 <header>
     <div class="hero-image">
+<<<<<<< Updated upstream
         <a href="patient.php"><img src="../assets/pp.png" width="50%"></a>
+=======
+        <a href="https://www.waynecountyhealthy.com"><img src="../assets/pp.png" width="50%"></a>
+>>>>>>> Stashed changes
     </div>
 </header>
 <title>Account</title>
@@ -67,9 +75,15 @@ $female = "checked";
 	<div>
 		<h4><?php echo $userRow['patientFirstName']; ?> <?php echo $userRow['patientLastName']; ?></h4>
 		<hr />
+<<<<<<< Updated upstream
 		<a href="patientlogout.php?logout=<?php echo $userRow['icPatient']; ?>"><button class="button3">Log Out</button></a>
 		<!--logout button-->
 		<a href="patientapplist.php?patientId=<?php echo $userRow['icPatient']; ?>"><button type="button" class="button3" data-toggle="modal" data-target="#myModal">Appointments</button></a>
+=======
+		<a href="patientlogout.php?logout=<?php echo $userRow['icPatient']; ?>"><button>Log Out</button></a>
+		<!--logout button-->
+		<a href="patientapplist.php?patientId=<?php echo $userRow['icPatient']; ?>"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Your Appointments</button></a>
+>>>>>>> Stashed changes
 		<!--appointment list button-->
 	</div>
 						

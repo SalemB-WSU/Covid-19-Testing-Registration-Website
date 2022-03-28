@@ -105,7 +105,12 @@
   {
     .button3 {
       padding: 20px 20px;
+<<<<<<< Updated upstream
      
+=======
+       
+      left: 25%;
+>>>>>>> Stashed changes
       height: 25%;
       width: 50%;
     }

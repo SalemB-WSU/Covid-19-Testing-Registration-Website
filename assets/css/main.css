@@ -21,11 +21,14 @@ div.hero-image {
     background-color: #D9D7F1;  /* original purple #98b8fca1 */
 
     /* option 2 D9D7F1 */
+<<<<<<< Updated upstream
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
     overflow-x: hidden;
+=======
+>>>>>>> Stashed changes
   }
 
   /* Words/Characters/Fonts */
@@ -86,6 +89,7 @@ div.hero-image {
 
     .radioAlign2 { text-align: left; 
                       padding-left: 2.5em;}
+<<<<<<< Updated upstream
 
     /* For forms with multiple checkboxes */
     .uniAlign{ text-align: left;
@@ -106,3 +110,5 @@ div.hero-image {
       padding-left: 0em;
       font-size: .65em;}
   }
+=======
+>>>>>>> Stashed changes

@@ -68,10 +68,15 @@ function CheckColors(val){
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <script src="https://kit.fontawesome.com/95c473646d.js" crossorigin="anonymous"></script>
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/submit.css">
     <link rel="stylesheet" href="../assets/css/table.css">
     <link rel="stylesheet" href="../assets/css/input.css">
+=======
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/submit.css">
+>>>>>>> Stashed changes
 </head>
 
 <header>
@@ -89,8 +94,18 @@ function CheckColors(val){
   <table>
   <thead>
       <tr>
+<<<<<<< Updated upstream
           <th>Date</th>
           <th>Time</th>
+=======
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Contact No.</th>
+          <th>Email</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+>>>>>>> Stashed changes
       </tr>
   </thead>
   <!--php below populates the information of the appointment that needs to be checked-in-->
@@ -118,12 +133,26 @@ function CheckColors(val){
           $icon='ok';
           $checked = 'disabled';
       }
+<<<<<<< Updated upstream
       
       echo "<tbody>";
       echo "<tr>";
           //appointment details is populated
           echo "<td>" . $appointment['date'] . "</td>";
           echo "<td>" . $appointment['timeslot'] . "</td>";
+=======
+      echo $today;
+      echo "<tbody>";
+      echo "<tr>";
+          //appointment details is populated
+          echo "<td>" . $appointment['patientFirstName'] . "</td>";
+          echo "<td>" . $appointment['patientLastName'] . "</td>";
+          echo "<td>" . $appointment['patientPhone'] . "</td>";
+          echo "<td>" . $appointment['patientEmail'] . "</td>";
+          echo "<td>" . $appointment['date'] . "</td>";
+          echo "<td>" . $appointment['timeslot'] . "</td>";
+          echo "<td>" . $appointment['status'] . "</td>";
+>>>>>>> Stashed changes
           echo "<form method='POST'>";
 
       
@@ -133,8 +162,13 @@ function CheckColors(val){
       echo "</table>";
       ?>
 
+<<<<<<< Updated upstream
       <h3>Help Us Find You!</h3>
 
+=======
+      <h2>Instruction: </h2>
+      <p>Help Us Find You!</p>
+>>>>>>> Stashed changes
       <!--Inputs form for the car details starts here-->
       <h2>Parking</h2>
       
@@ -178,7 +212,11 @@ function CheckColors(val){
 
 <br>
 <!--when clicked the submit button it sends the input of the car information to the php at the top inorder for it to be entered to the database-->
+<<<<<<< Updated upstream
 <button class='button2' type='submit' value='Submit' name='submit'>Check In</button>
+=======
+<button class='button2' type='submit' value='Submit' name='submit'>Update</button>
+>>>>>>> Stashed changes
 
 </form>
 
